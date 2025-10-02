@@ -48,6 +48,16 @@ section {
   background: rgba(0, 0, 0, 0.55);
 }
 
+/* ===== Hero Logo ===== */
+.hero-logo {
+  max-width: 120px;
+  margin: 0 auto 20px auto;
+  display: block;
+  border-radius: 50%; /* optional: makes it circular if your logo fits */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+
 .hero-content {
   position: relative;
   z-index: 2;
@@ -66,6 +76,30 @@ section {
   margin-bottom: 30px;
   letter-spacing: 1px;
 }
+
+/* ===== Tagline Marquee Animation ===== */
+.tagline {
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.tagline span {
+  display: inline-block;
+  padding-left: 100%;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  color: #fff;
+  animation: marquee 12s linear infinite;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
 
 .btn {
   background: linear-gradient(45deg, #d4af37, #f5d76e);
@@ -99,7 +133,7 @@ section {
 }
 
 .product-card {
-  background: #fff;
+  background: #ffffff;
   border-radius: 20px;
   padding: 30px 20px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
